@@ -1,0 +1,87 @@
+.card img{
+    height: 70%;
+    
+}
+
+.card{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #F48EA0;
+    width: 350px;
+    max-width: 20vw;
+    max-height: 28vw;
+    height: 460px;
+    border: 2px solid #0f284c;
+    border-radius: 30px;
+    padding: 20px;
+    box-shadow: 17px 17px 0px 0px #00AEE0, 17px 17px 0px 2px #0f284c;
+    flex-shrink: 0;
+    flex-grow: 0;
+    transition: transform 0.2s, box-shadow 0.2s;
+    
+}
+
+.card:hover{
+    background-color: rgb(253, 142, 167);
+    cursor: pointer;
+    transform: translate(10px,10px);
+    box-shadow: 7px 7px 0px 0px #059bc5, 7px 7px 0px 2px #0f284c;
+}
+
+.card:active{
+    transition: none;
+    transform: translate(17px,17px);
+     box-shadow: 0px 0px 0px 0px #0c7d9c, 0px 0px 0px 2px #0f284c;
+}
+.card svg{
+    width: 100%;
+    object-fit: contain;
+}
+
+.cards{
+    height: auto;
+    min-height: 100vh;
+    padding-top: 120px;
+    padding-bottom: 50px;
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.second .card{
+   width: 385px;
+   height: 506px;
+    max-width: 25vw;
+    max-height: 34vw;
+}
+@media (max-width: 768px) {
+  .card-container { width: 95vw; flex-direction: column; padding: 20px 10px; }
+  .cards { 
+    height: auto; 
+    flex-direction: column; 
+    gap: 40px; 
+    padding: 120px 20px 50px 20px; 
+  }
+  .card { 
+    width: 100%; 
+    max-width: 100%; 
+    height: auto; 
+    min-height: 350px;
+    max-height: none;
+    margin: 0; 
+    padding: 30px 20px;
+    box-sizing: border-box;
+  }
+  .second .card {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    min-height: 350px;
+    max-height: none;
+  }
+}

@@ -1,0 +1,13 @@
+@font-face {
+  font-family: 'hyper';
+  src: url("./assets/Atkinson_Hyperlegible/AtkinsonHyperlegibleMono-VariableFont_wght.ttf") format("truetype");
+}
+@font-face {
+  font-family: "hyperBold";
+  src: url("./assets/Atkinson_Hyperlegible/AtkinsonHyperlegible-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "chery";
+  src: url("./assets/Cherry_Bomb_One/CherryBombOne-Regular.ttf") format("truetype");
+}
