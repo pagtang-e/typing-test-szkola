@@ -1,4 +1,4 @@
-import click from '../assets/1026.mp3';
+import click from '../assets/1026.MP3';
 import { Link } from 'react-router';
 
 function RankedMenu() {

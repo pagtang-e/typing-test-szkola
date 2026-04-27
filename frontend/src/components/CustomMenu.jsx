@@ -1,4 +1,4 @@
-import hardClick from '../assets/1026.mp3';
+import hardClick from '../assets/1026.MP3';
 import click from '../assets/click.m4a';
 import { MultiSectionDigitalClock } from '@mui/x-date-pickers/MultiSectionDigitalClock';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';

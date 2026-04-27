@@ -1,11 +1,11 @@
-import Card from "../components/card";
+import Card from "../components/Card";
 import customImg from "../assets/custom.png";
 import RankedImg from "../assets/hardcoreIcon.svg?react";
 import trainingImg from "../assets/training.png";
 import { useState } from "react";
-import CustomMenu from "../components/customMenu";
-import RankedMenu from "../components/rankedMenu";
-import TrainingMenu from "../components/trainingMenu";
+import CustomMenu from "../components/CustomMenu";
+import RankedMenu from "../components/RankedMenu";
+import TrainingMenu from "../components/TrainingMenu";
 import closingSound from '../assets/close.mp3';
 import Close from '../assets/xIcon.svg?react';
 import Info from '../assets/IIcon.svg?react';
@@ -13,7 +13,7 @@ import Ranking from '../assets/ranking.svg?react';
 import Classic from '../assets/classic.svg?react'
 import RankingComponent from '../components/RankingComponent';
 
-import click from '../assets/1026.mp3';
+import click from '../assets/1026.MP3';
 
 export default function Landing(){
 

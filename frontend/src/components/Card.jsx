@@ -1,4 +1,4 @@
-import click from '../assets/1026.mp3';
+import click from '../assets/1026.MP3';
 import Classic from '../assets/classic.svg?react'
 import Hardcore from "../assets/hardcoreIcon.svg?react";
 import Custom from "../assets/custom.svg?react";
