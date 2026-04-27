@@ -8,5 +8,5 @@ export default defineConfig({
   server: {
     host: true, // Enables connecting from other devices on the network
   },
-  
+  base: '/typing-test-szkola/'
 })

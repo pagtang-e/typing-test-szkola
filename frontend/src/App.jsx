@@ -12,7 +12,7 @@ function App() {
 
   return (
     <>
-    <BrowserRouter>
+    <BrowserRouter basename="/typing-test-szkola">
 
       <Routes>
             <Route index element={<Landing/>} />
