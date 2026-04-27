@@ -65,23 +65,20 @@
     height: auto; 
     flex-direction: column; 
     gap: 40px; 
-    padding: 120px 20px 50px 20px; 
+    padding: 70px 20px 50px 20px; /* Reduced top padding */
   }
-  .card { 
-    width: 100%; 
-    max-width: 100%; 
-    height: auto; 
+  .card, .second .card { 
+    width: calc(100% - 17px); 
+    max-width: 350px; 
+    height: 460px; /* same size for all cards */
     min-height: 350px;
     max-height: none;
-    margin: 0; 
+    margin: 0 17px 0 0; /* offset to center perfectly considering the 17px shadow */
     padding: 30px 20px;
     box-sizing: border-box;
   }
-  .second .card {
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    min-height: 350px;
-    max-height: none;
+  .card h2 {
+    font-size: min(3.5rem, 12vw); /* Make sure long words like Hardcore don't stretch the card */
+    text-align: center;
   }
 }

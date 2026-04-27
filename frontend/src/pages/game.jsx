@@ -157,6 +157,7 @@ function Game() {
         </div>
         <div className='character'>
             <h1>{char}</h1>
+            <input type="text" id='bait' />
         </div>
         
     </div>

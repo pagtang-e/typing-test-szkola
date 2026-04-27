@@ -1,8 +1,11 @@
 import { Link } from 'react-router-dom';
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
+
 
 function EndGame(props) {
     const saved = useRef(false);
+    const [quote,setQuote] = useState();
+    const apiKey = import.meta.env.VITE_API_KEY;
 
     useEffect(() => {
         if (saved.current) return;
@@ -25,8 +28,41 @@ function EndGame(props) {
         const existingResults = JSON.parse(localStorage.getItem('typingResults') || '[]');
         existingResults.push(newResult);
         localStorage.setItem('typingResults', JSON.stringify(existingResults));
+
+        getPlayerQuote(props.score)
+        
     }, []);
 
+
+    
+
+    async function getPlayerQuote(score) {
+    const apiKey = import.meta.env.VITE_API_NINJAS_KEY;
+  
+    // Logic to determine category
+    let category = 'inspirational';
+    if (score > 1700) category = 'success';
+
+    try {
+        const response = await fetch(`https://api.api-ninjas.com/v2/randomquotes?categories=${category}`, {
+            method: 'GET',
+            headers: {
+                        'X-Api-Key': apiKey,
+                        'Content-Type': 'application/json'
+             }
+    });
+
+    const data = await response.json();
+    
+    setQuote(data)
+   
+    }
+     catch (error) {
+        console.error("Failed to fetch quote:", error);
+        return { quote: "Keep going!", author: "System" };
+    }
+    }
+    console.log(quote)
     return (
         
         <div className="menu statsMenu">
@@ -36,6 +72,8 @@ function EndGame(props) {
             <p> {props.incorrectChars}</p>
             </div>
             <p className="score"> {props.score}</p>
+               {quote ? <div className='quote'><p>{quote[0].quote}</p><p>{quote[0].author}</p></div>: <div className='quote'><p style={{textAlign:"center"}}>Loading quote...</p></div>} 
+
             <div className="buttons">
                <button className="start endGame" onClick={()=>window.location.reload()}>Play Again</button>
                 <button className="start endGame"><Link to="/" >Exit to menu</Link> </button> 

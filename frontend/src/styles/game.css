@@ -105,6 +105,18 @@
     transform: translate(8px,8px);
 }
 
+.quote{
+
+    font-size: 0.9rem;
+    margin: 50px;
+
+}
+.quote p:nth-child(2){
+
+    text-align: right;
+    font-size: 0.7rem;
+
+}
 .buttons{
     display: flex;
     justify-content: center;
@@ -155,6 +167,7 @@ a{
 .backdrop.pause{
     z-index: 15;
     background-color: #FDB81377;
+    -webkit-backdrop-filter: blur(15px);
     backdrop-filter: blur(15px);
 }
 .backdrop h1{
@@ -195,4 +208,44 @@ a{
 }
 .stats.inco{
     gap: 16px;
+}
+
+@media (max-width: 768px) {
+
+    .rain{
+        display: none;
+
+    }
+    .gutter{
+        display: none;
+    }
+    .timer{
+        top: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+}
+@media (max-height: 650px) {
+
+    .gameArea h1{
+        
+        margin-top: -20%;
+        scale: 0.8;
+        
+    }
+    .stats{
+       scale: 0.8;
+    }
+
+}
+#bait{
+    opacity: 0%;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    font-size: 32px;
+    top: -7vh;
+    left: -10vw;
+    caret-color: transparent;
 }

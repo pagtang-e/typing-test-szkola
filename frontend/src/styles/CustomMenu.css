@@ -1,43 +1,43 @@
 .custom-menu .timeContainer p{
-    text-align: center;
+    text-align: center !important;
 }
 .custom-menu .time{
-     height: 9rem;
-     border: 5px solid #0f284c;
-     width: fit-content;
+     height: 9rem !important;
+     border: 5px solid #0f284c !important;
+     width: fit-content !important;
      border-radius: 15px;
 }
 
 .custom-menu .time ul{
     overflow-y: visible;
-    width: fit-content;
-    text-align: center;
+    width: fit-content !important;
+    text-align: center !important;
     background-color: rgba(244, 142, 160, 0.133); /* #F48EA022 */
 }
 
 .custom-menu .time ul li{
-    font-family: hyper,sans-serif;
-    font-size: 3rem;
-    padding-block: 0;
+    font-family: hyper,sans-serif !important;
+    font-size: 3rem !important;
+    padding-block: 0 !important;
     width: 5rem;
 }
 .custom-menu .time ul li:first-of-type{
-    margin-top: 2.15rem;
+    margin-top: 2.15rem !important;
 }
 .custom-menu .time ul li:last-of-type{
-    margin-bottom: 2.15rem;
+    margin-bottom: 2.15rem !important;
 }
 .custom-menu .time ul .Mui-selected{
-    background-color: #F48EA0;
-    border-radius: 10px;
-    border: 2px solid #0f284c;
-    color: #0f284c;
+    background-color: #F48EA0 !important;
+    border-radius: 10px !important;
+    border: 2px solid #0f284c !important;
+    color: #0f284c !important;
 }
 .custom-menu .time ul li span{
-    line-height: 1;
+    line-height: 1 !important;
 }
 .custom-menu .time ul:not(:first-of-type){
-    border-left: 5px solid #0f284c;
+    border-left: 5px solid #0f284c !important;
 }
 
 .custom-menu .menu{
@@ -63,12 +63,12 @@
    
 }
 .custom-menu .check span{
-    font-size: 3rem;
-    font-family: hyper, sans-serif;
-    color: #0f284c;
+    font-size: 3rem !important;
+    font-family: hyper, sans-serif !important;
+    color: #0f284c !important;
 }
 .custom-menu .check{
-    margin-inline: 20px;
+    margin-inline: 20px !important;
 }
 
 .custom-menu .menu p{
@@ -99,32 +99,45 @@
     font-weight: 700;
 }
 @media (max-width: 768px) {
-  .custom-menu { width: 95vw; padding: 20px; box-sizing: border-box; }
+  .custom-menu { width: 100vw; padding: 20px; box-sizing: border-box; }
   .custom-menu .options { flex-direction: column; }
   .custom-menu .menu {
-    padding: 20px 10px;
-    width: 100%;
+    padding: 30px 15px;
+    width: calc(100% - 17px);
+    max-width: 90vw;
     box-sizing: border-box;
+    position: fixed; /* Make it overlay so it doesn't render at the bottom of the page */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    margin: 0;
+    max-height: 85vh; /* Avoid bottom clipping */
+    overflow-y: auto; /* Enable scroll if content is too tall */
   }
   .custom-menu fieldset {
-    padding-inline: 15px;
+    padding: 15px 5px;
     width: 100%;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     align-items: center;
+    border-radius: 20px; /* Better curve for mobile */
   }
   .custom-menu legend {
-    font-size: 2.5rem;
+    font-size: 2.2rem; /* Give more breathing room */
+  }
+  .custom-menu .timeContainer p {
+    font-size: 1.5rem;
   }
   .custom-menu .time {
     width: 100%;
     display: flex;
     justify-content: center;
+    height: auto !important;
   }
   .custom-menu .time ul li {
-    font-size: 3.5rem;
-    width: 6rem;
+    font-size: 2.2rem !important;
+    width: 4rem;
     min-height: 48px;
     display: flex;
     align-items: center;
@@ -134,9 +147,9 @@
     display: flex;
     align-items: center;
     min-height: 48px;
-    margin: 10px 0;
+    margin: 2px 0 !important;
   }
   .custom-menu .check span {
-    font-size: 3rem;
+    font-size: 2.2rem !important;
   }
 }
