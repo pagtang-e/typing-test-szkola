@@ -58,7 +58,7 @@ export default function Landing(){
         <div onClick={TrainingClick}><Card name="Hardcore" /></div>
         
         </div>
-        <Ranking alt="ranking" className="info close" onClick={()=>{setRankingOpen(true); window.scrollTo({ top:0 })}}/>
+       { (!custom && !ranked && !training && !rankingOpen)&&<Ranking alt="ranking" className="info close" onClick={()=>{setRankingOpen(true); window.scrollTo({ top:0 })}}/>}
         { (custom || ranked ||training||rankingOpen)&&<div className="backdrop" onClick={menuClose}> <Close alt="close" className="close" /></div>}
         {custom && <CustomMenu/>}
         {ranked && <RankedMenu/>}

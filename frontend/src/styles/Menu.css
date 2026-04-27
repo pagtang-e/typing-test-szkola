@@ -12,6 +12,7 @@
     font-family: hyper, sans-serif;
     text-align: justify;
     font-size: 1.5rem;
+    min-width: 550px;
     
 }
  .menu > p:last-of-type{
@@ -90,6 +91,7 @@
     text-align: center;
     line-height: 25px;
     font-family: chery, sans-serif;
+    z-index: 100;
 
 }
 .info.close{
@@ -147,6 +149,7 @@
   .menu { 
     width: calc(100% - 17px); 
     max-width: 90vw;
+     min-width: auto;
     padding: 30px 20px;
     font-size: 1.2rem;
     box-sizing: border-box;
@@ -155,7 +158,7 @@
     left: 50%;
     transform: translate(-50%, -50%); 
     margin: 0;
-    max-height: 85vh; /* Keep it inside viewport bounds */
+    max-height: 90vh; /* Keep it inside viewport bounds */
     overflow-y: auto; /* Enable scrolling if content is too tall */
   }
   .backdrop {

@@ -134,7 +134,7 @@ function Game() {
   return (
     <>
     {countDown>0 && <><div className='backdrop pause'><h1>{countDown}</h1></div></>}
-    <Close alt="close" className="close game" onClick={()=>setPause(true)}/>
+   {(!End && !pause) && <Close alt="close" className="close game" onClick={()=>setPause(true)}/>}
    
     <div className='timer'>
         
@@ -157,7 +157,7 @@ function Game() {
         </div>
         <div className='character'>
             <h1>{char}</h1>
-            <input type="text" id='bait' />
+           
         </div>
         
     </div>
@@ -167,6 +167,7 @@ function Game() {
                <button className="start endGame" onClick={()=>window.location.reload()}>restart</button>
             <Link to="/" className="start endGame">Exit to Menu</Link> 
         </div></div></>}
+         {!End&&<input type="text" id='bait' />}
     </>
   );
 }
