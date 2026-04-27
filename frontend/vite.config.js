@@ -7,5 +7,6 @@ export default defineConfig({
   plugins: [react(), svgr()],
   server: {
     host: true, // Enables connecting from other devices on the network
-  }
+  },
+  base: '/typing-test-szkola/'
 })
